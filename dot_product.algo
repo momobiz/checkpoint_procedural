@@ -1,0 +1,42 @@
+Algorithm dot_product_procedure
+var v1:Array_of_float[4]:=[1,2,3,0];
+var    v2:Array_of_float[4]:=[1,2,3,1];
+var ps:float:=0;
+
+
+Procedure produit_saclaire(v1,v2)
+    BEGIN
+    if (v1.length!=v2.length) Write("erreur"); 
+    FOR var i FROM  0 To v1.length-1 STEP 1 DO 
+        ps+:=v1[i]+v2(i);
+    END_FOR
+    if(ps=0)  write( 'vecteur orthogonaux);
+    else write(ps);
+
+    END
+ BEGIN
+    produit_saclaire(v1,v2)
+END
+/////////////////////////////////////////////////////////////////////////////////////////
+Algorithm dot_product_fonction
+var v1:Array_of_float[4]:=[1,2,3,0];
+var    v2:Array_of_float[4]:=[1,2,3,1];
+var produit:float;
+
+
+function produit_saclaire(v1,v2)
+    var ps:float:=0;
+    BEGIN
+    if (v1.length!=v2.length) Write("erruer"); 
+    FOR var i FROM  0 To v1.length-1 STEP 1 DO 
+        ps+:=v1[i]+v2(i);
+    END
+   return ps;
+END
+
+ BEGIN
+ produit:=produit_saclaire(v1,v2);
+ if(produit=0) Write('vecteurs orthogaux')
+ else write(produit)
+END
+
